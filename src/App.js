@@ -1,8 +1,9 @@
+
 import logo from './logo.svg';
 import './App.css';
-
 import { useState } from 'react';
 
+function App() {
   const [showCat, setShowCat] = useState(false);
   // 註冊表單狀態
   const [username, setUsername] = useState("");
