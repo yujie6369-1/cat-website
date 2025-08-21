@@ -38,6 +38,12 @@ app.post('/login', (req, res) => {
   res.json({ message: '登入成功' });
 });
 
+
+// 測試 API
+app.get('/test', (req, res) => {
+  res.send('API OK');
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
