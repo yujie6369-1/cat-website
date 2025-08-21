@@ -46,7 +46,7 @@ function App() {
           <input type="password" placeholder="密碼" value={password} onChange={e => setPassword(e.target.value)} required style={{ width: '100%', padding: 6 }} />
         </div>
         <div style={{ marginBottom: 8 }}>
-          <input type="text" placeholder="PIN碼（請向站長索取）" value={pin} onChange={e => setPin(e.target.value)} required style={{ width: '100%', padding: 6 }} />
+          <input type="text" placeholder="PIN碼（請向yuji索取）" value={pin} onChange={e => setPin(e.target.value)} required style={{ width: '100%', padding: 6 }} />
         </div>
         <button type="submit" style={{ width: '100%', padding: 8 }}>註冊</button>
         {registerMsg && <div style={{ marginTop: 10 }}>{registerMsg}</div>}
