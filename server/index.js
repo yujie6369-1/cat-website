@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
+const path = require('path');
 const app = express();
 const PORT = 3001;
 
@@ -46,6 +47,22 @@ app.post('/login', (req, res) => {
 // 測試 API
 app.get('/test', (req, res) => {
   res.send('API OK');
+});
+
+// 安全的 users.json 檢視 API，需帶 secret 參數
+app.get('/show-users', (req, res) => {
+  const secret = req.query.secret;
+  // 請自行更改這個 secret 值，避免被他人猜到
+  if (secret !== 'mySuperSecret123') {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+  const usersPath = path.join(__dirname, 'users.json');
+  fs.readFile(usersPath, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to read users.json' });
+    }
+    res.type('json').send(data);
+  });
 });
 
 app.listen(PORT, () => {
