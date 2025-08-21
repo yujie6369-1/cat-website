@@ -15,20 +15,7 @@ function App() {
           <img src="https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg" alt="cat" style={{ maxWidth: '300px', borderRadius: '12px' }} />
         </div>
       )}
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  {/* 已移除 React 標誌與說明文字 */}
     </div>
   );
 }
