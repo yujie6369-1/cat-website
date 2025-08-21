@@ -16,7 +16,7 @@ function App() {
     e.preventDefault();
     setRegisterMsg("");
     try {
-      const res = await fetch("/register", {
+      const res = await fetch("https://cat-website.onrender.com/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password, pin })
@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>這是一個貓咪網站</h1>
+      <h1>欸!不揪喔</h1>
 
       {/* 註冊表單 */}
       <form onSubmit={handleRegister} style={{ marginBottom: 24, border: '1px solid #ccc', padding: 16, borderRadius: 8, maxWidth: 320, margin: '0 auto' }}>
