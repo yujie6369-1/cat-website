@@ -23,7 +23,7 @@ app.use(express.json());
 // 註冊 API
 app.post('/register', async (req, res) => {
   const { username, password, pin } = req.body;
-  if (pin !== '20070806') {
+  if (pin !== '200708060') {
     return res.status(400).json({ message: 'PIN 錯誤' });
   }
   try {
