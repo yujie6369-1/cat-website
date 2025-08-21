@@ -13,8 +13,8 @@ app.use(express.json());
 // 註冊 API
 app.post('/register', (req, res) => {
   const { username, password, pin } = req.body;
-  // 這裡假設 pin 必須是 "1234"
-  if (pin !== '1234') {
+  // 這裡假設 pin 必須是 "20070806"
+  if (pin !== '20070806') {
     return res.status(400).json({ message: 'PIN 錯誤' });
   }
   let users = [];
