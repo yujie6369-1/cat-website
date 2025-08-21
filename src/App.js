@@ -1,5 +1,5 @@
 
-import logo from './logo.svg';
+import pingchengImg from './images/139240.jpg';
 import './App.css';
 import { useState } from 'react';
 
@@ -52,10 +52,10 @@ function App() {
         {registerMsg && <div style={{ marginTop: 10 }}>{registerMsg}</div>}
       </form>
 
-      <button onClick={() => setShowCat(true)}>貓</button>
+      <button onClick={() => setShowCat(true)}>把波</button>
       {showCat && (
         <div style={{ marginTop: '20px' }}>
-          <img src="https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg" alt="cat" style={{ maxWidth: '300px', borderRadius: '12px' }} />
+          <img src={pingchengImg} alt="pingcheng" style={{ maxWidth: '300px', borderRadius: '12px' }} />
         </div>
       )}
       {/* 已移除 React 標誌與說明文字 */}
