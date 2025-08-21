@@ -6,7 +6,7 @@ const PORT = 3001;
 app.use(express.json());
 
 // 註冊 API
-app.post('https://cat-website.onrender.com/register', (req, res) => {
+app.post('/register', (req, res) => {
   const { username, password, pin } = req.body;
   // 這裡假設 pin 必須是 "1234"
   if (pin !== '1234') {
@@ -25,7 +25,7 @@ app.post('https://cat-website.onrender.com/register', (req, res) => {
 });
 
 // 登入 API
-app.post('https://cat-website.onrender.com/login', (req, res) => {
+app.post('/login', (req, res) => {
   const { username, password } = req.body;
   let users = [];
   if (fs.existsSync('users.json')) {
@@ -39,5 +39,5 @@ app.post('https://cat-website.onrender.com/login', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:3000`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
